@@ -9,15 +9,33 @@
 <body class="font-sans bg-gray-100">
   <nav class="bg-blue-500 p-4">
     <div class="container mx-auto flex items-center justify-between">
-    <div class="text-white font-bold text-lg">My Website</div>
-    <div class="flex space-x-4">
-      <a href="#" class="text-white hover:text-gray-300">Home</a>
-      <a href="/about" class="text-white hover:text-gray-300">About</a>
-      <a href="/products" class="text-white hover:text-gray-300">Products</a>
-      <a href="/contactus" class="text-white hover:text-gray-300">Contact Us</a>
-</div>
-</div>
+      <div class="text-white font-bold text-lg">My Website</div>
+      <div class="hidden md:flex space-x-4"> <!-- Hide on small screens (md and below) -->
+        <a href="#" class="text-white hover:text-gray-300">Home</a>
+        <a href="/about" class="text-white hover:text-gray-300">About</a>
+        <a href="/products" class="text-white hover:text-gray-300">Products</a>
+        <a href="/contactus" class="text-white hover:text-gray-300">Contact Us</a>
+      </div>
+      <div class="md:hidden"> <!-- Show on small screens (md and below) -->
+        <!-- Add responsive navigation menu here -->
+        <button id="mobile-menu-button" class="text-white unde focus:outline-none">
+          <h2 class="underline">Menu</h2>
+        </button>
+        <div id="mobile-menu" class="hidden">
+          <a href="#" class="block text-white hover:text-gray-300 py-2">Home</a>
+          <a href="/about" class="block text-white hover:text-gray-300 py-2">About</a>
+          <a href="/products" class="block text-white hover:text-gray-300 py-2">Products</a>
+          <a href="/contactus" class="block text-white hover:text-gray-300 py-2">Contact Us</a>
+        </div>
+      </div>
+    </div>
   </nav>
 
+  <script>
+    // Toggle mobile menu visibility
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
