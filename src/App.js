@@ -1,11 +1,16 @@
-import Counter from './Counter';
+// App.js
+import React from 'react';
 
-function App() {
+import FirstComponent from './FirstComponent';
+import SecondComponent from './SecondComponent';
+
+const App = () => {
   return (
-    <div className="App">
-       <Counter />
+    <div>
+      <FirstComponent />
+      <SecondComponent />
     </div>
   );
-}
+};
 
 export default App;
