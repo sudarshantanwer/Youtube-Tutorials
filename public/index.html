@@ -1,0 +1,11 @@
+<html>
+<head>
+  <title>htmx Example</title>
+  <script type="text/javascript" src="https://unpkg.com/htmx.org@1.6.1/dist/htmx.min.js"></script>
+</head>
+<body>
+<h1>htmx example</h1>
+<h2 id="counter">Counter: <span>0</span></h2>
+<button hx-get="/api/increment" hx-swap="innerHTML" hx-target="#counter">Increment Counter</button>
+</body>
+</html>
