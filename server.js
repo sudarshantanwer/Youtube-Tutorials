@@ -4,16 +4,13 @@ const app = express();
 const port = 3000;
 
 
-let counter = 0;
 app.use(express.static('public'));
 
-app.get('/api/increment', (req, res)=>{
-    counter++;
-    const updatedHTML = `<h2 id="counter">Counter: <span>${counter}</span></h2>`;
-
+app.get('/api/currentTime', (req, res)=>{
+    const currentTime = new Date().toLocaleTimeString();
+    const updatedHTML = `<h2 id="counter">Time: <span>${currentTime}</span></h2>`;
     res.send(updatedHTML);
 })
-
 
 
 app.listen(port, () => {

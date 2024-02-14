@@ -5,7 +5,8 @@
 </head>
 <body>
 <h1>htmx example</h1>
-<h2 id="counter">Counter: <span>0</span></h2>
-<button hx-get="/api/increment" hx-swap="innerHTML" hx-target="#counter">Increment Counter</button>
+<div id="time-container" hx-get="/api/currentTime" hx-swap="innerHTML" hx-trigger="every 1s">
+  Loading...
+</div>
 </body>
 </html>
