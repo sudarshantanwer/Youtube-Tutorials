@@ -3,12 +3,14 @@ import React from 'react';
 
 import FirstComponent from './FirstComponent';
 import SecondComponent from './SecondComponent';
+import DisplayData from './DisplayData';
 
 const App = () => {
   return (
-    <div>
+    <div className='app'>
       <FirstComponent />
       <SecondComponent />
+      <DisplayData />
     </div>
   );
 };

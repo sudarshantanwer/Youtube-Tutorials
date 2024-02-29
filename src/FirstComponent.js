@@ -1,21 +1,62 @@
-// FirstComponent.js
 import React from 'react';
-import useStore from './store';
+import './styles/profile.css';
+import useUserStore from './UserStore';
 
-const FirstComponent = () => {
-    const {text, setText} = useStore();
+const UserForm = () => {
+  const { firstName, lastName, email, salary, setUserDetails, clearUserDetails } = useUserStore();
 
-    const handleChange = (e)=>{
-        setText(e.target.value);
-    }
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', { firstName, lastName, email, salary });
+    // Add your form submission logic here
+  };
 
   return (
-    <div style={{ backgroundColor: 'lightblue', padding: '20px', margin: '10px' }}>
-      <h2>First Component</h2>
-      <input type="text" value={text} onChange={handleChange} placeholder="Enter text" />
-    </div>
+    <form className="user-form" onSubmit={handleSubmit}>
+      <h2>User Details</h2>
+      <label>
+        First Name:
+        <input
+          type="text"
+          value={firstName}
+          onChange={(e) => setUserDetails({ firstName: e.target.value })}
+        />
+      </label>
+      <br />
+
+      <label>
+        Last Name:
+        <input
+          type="text"
+          value={lastName}
+          onChange={(e) => setUserDetails({ lastName: e.target.value })}
+        />
+      </label>
+      <br />
+
+      <label>
+        Email:
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setUserDetails({ email: e.target.value })}
+        />
+      </label>
+      <br />
+
+      <label>
+        Salary:
+        <input
+          type="number"
+          value={salary}
+          onChange={(e) => setUserDetails({ salary: e.target.value })}
+        />
+      </label>
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
   );
 };
 
-export default FirstComponent;
+export default UserForm;
