@@ -1,7 +1,7 @@
 import React from 'react';
-import './styles/displayData.css'; // Import the CSS file
-import useEmployeeStore from './EmployeeStore';
-import useUserStore from './UserStore';
+import '../styles/displayData.css'; // Import the CSS file
+import useEmployeeStore from '../stores/EmployeeStore';
+import useUserStore from '../stores/UserStore';
 
 const DisplayData = () => {
   const { employeeCode, salary, department, role } = useEmployeeStore();

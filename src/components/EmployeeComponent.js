@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles/employee.css';
-import useEmployeeStore from './EmployeeStore';
+import '../styles/employee.css';
+import useEmployeeStore from '../stores/EmployeeStore';
 
 const EmployeeForm = () => {
   const { employeeCode, salary, department, role, setEmployeeDetails, clearEmployeeDetails } = useEmployeeStore();

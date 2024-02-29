@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles/profile.css';
-import useUserStore from './UserStore';
+import '../styles/profile.css';
+import useUserStore from '../stores/UserStore';
 
 const UserForm = () => {
   const { firstName, lastName, email, salary, setUserDetails, clearUserDetails } = useUserStore();

@@ -1,15 +1,15 @@
 // App.js
 import React from 'react';
 
-import FirstComponent from './FirstComponent';
-import SecondComponent from './SecondComponent';
-import DisplayData from './DisplayData';
+import UserComponent from './components/UserComponent';
+import EmployeeComponent from './components/EmployeeComponent';
+import DisplayData from './components/DisplayData';
 
 const App = () => {
   return (
     <div className='app'>
-      <FirstComponent />
-      <SecondComponent />
+      <UserComponent />
+      <EmployeeComponent />
       <DisplayData />
     </div>
   );
