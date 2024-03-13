@@ -3,7 +3,7 @@ import '../styles/employee.css';
 import useEmployeeStore from '../stores/EmployeeStore';
 
 const EmployeeForm = () => {
-  const { employeeCode, salary, department, role, setEmployeeDetails, clearEmployeeDetails } = useEmployeeStore();
+  const { employeeCode, salary, department, role, setEmployeeDetails } = useEmployeeStore();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,7 +54,6 @@ const EmployeeForm = () => {
       </label>
       <br />
 
-      <button type="submit">Submit</button>
     </form>
   );
 };

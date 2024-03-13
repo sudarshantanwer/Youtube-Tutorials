@@ -5,8 +5,7 @@ const useEmployeeStore = create((set) => ({
   salary: '',
   department: '',
   role: '',
-  setEmployeeDetails: (employeeDetails) => set({ ...employeeDetails }),
-  clearEmployeeDetails: () => set({ employeeCode: '', salary: '', department: '', role: '' }),
+  setEmployeeDetails: (employeeDetails) => set({ ...employeeDetails })
 }));
 
 export default useEmployeeStore;

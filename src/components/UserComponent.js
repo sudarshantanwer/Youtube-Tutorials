@@ -3,11 +3,11 @@ import '../styles/profile.css';
 import useUserStore from '../stores/UserStore';
 
 const UserForm = () => {
-  const { firstName, lastName, email, salary, setUserDetails, clearUserDetails } = useUserStore();
+  const { firstName, lastName, email, setUserDetails } = useUserStore();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', { firstName, lastName, email, salary });
+    console.log('Form submitted:', { firstName, lastName, email });
     // Add your form submission logic here
   };
 
@@ -44,17 +44,6 @@ const UserForm = () => {
       </label>
       <br />
 
-      <label>
-        Salary:
-        <input
-          type="number"
-          value={salary}
-          onChange={(e) => setUserDetails({ salary: e.target.value })}
-        />
-      </label>
-      <br />
-
-      <button type="submit">Submit</button>
     </form>
   );
 };
