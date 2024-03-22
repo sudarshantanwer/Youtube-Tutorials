@@ -1,9 +1,12 @@
 import React from 'react';
 import '../styles/profile.css';
 import useUserStore from '../stores/UserStore';
+import ProductDetails from './ProductDetails';
 
 const UserForm = () => {
-  const { firstName, lastName, email, setUserDetails } = useUserStore();
+  const { firstName, lastName, email, setUserDetails, fetchData, product } = useUserStore();
+console.log("product>>>", product);
+console.log("fetchData>>>", fetchData);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,7 +15,7 @@ const UserForm = () => {
   };
 
   return (
-    <form className="user-form" onSubmit={handleSubmit}>
+    <div className="user-form">
       <h2>User Details</h2>
       <label>
         First Name:
@@ -43,8 +46,8 @@ const UserForm = () => {
         />
       </label>
       <br />
-
-    </form>
+<ProductDetails></ProductDetails>
+    </div>
   );
 };
 

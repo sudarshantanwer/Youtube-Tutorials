@@ -1,13 +1,10 @@
 import create from 'zustand';
 
-const useUserStore = create((set) => ({
-  firstName: '',
+const productStore = create((set) => ({
   product: {},
-  lastName: '',
-  email: '',
-  setUserDetails: (userDetails) => set({ ...userDetails }),
+  isLoading: false,
+  error: null,
   fetchData: async () => {
-    console.log('fetching data')
     // Set isLoading to true while fetching data
     set({ isLoading: true });
 
@@ -28,4 +25,4 @@ const useUserStore = create((set) => ({
   },
 }));
 
-export default useUserStore;
+export default productStore;

@@ -1,16 +1,11 @@
 // App.js
 import React from 'react';
-
-import UserComponent from './components/UserComponent';
-import EmployeeComponent from './components/EmployeeComponent';
-import DisplayData from './components/DisplayData';
+import ProductDetails from './components/ProductDetails';
 
 const App = () => {
   return (
     <div className='app'>
-      <UserComponent />
-      <EmployeeComponent />
-      <DisplayData />
+      <ProductDetails />
     </div>
   );
 };
