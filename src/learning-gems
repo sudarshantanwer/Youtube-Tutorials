@@ -1,0 +1,7 @@
+The app.use() function in Express.js adds middleware to the application’s request-processing pipeline. It applies the specified middleware to all incoming requests or to specific routes, allowing you to modify request/response objects, perform operations, or handle errors throughout the application.
+
+server.js: This is the entry point that listens to requests.
+app.js: Handles middleware setup, route importing, and base URL prefixing.
+/routers: The route files define the API endpoints and map them to corresponding controller methods.
+/controllers: Controllers contain the business logic for the API.
+/models: Models interact with the database (e.g., MongoDB, MySQL).
